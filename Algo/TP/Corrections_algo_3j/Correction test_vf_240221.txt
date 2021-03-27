@@ -1,0 +1,533 @@
+﻿import java.util.Arrays;
+import java.util.Scanner;
+public class Test {
+
+	public static int saisieInt(String msg) 
+	{
+		System.out.println(msg);
+		Scanner sc = new Scanner(System.in);
+		return sc.nextInt();
+	}
+
+	public static double saisieDouble(String msg) 
+	{
+		System.out.println(msg);
+		Scanner sc = new Scanner(System.in);
+		return sc.nextDouble();
+	}
+
+
+	public static String saisieString(String msg) 
+	{
+		System.out.println(msg);
+		Scanner sc = new Scanner(System.in);
+		return sc.nextLine();
+	}
+
+
+	public static void tp1_2() 
+	{
+		int min=20;
+		int max=10;
+		int tmp;
+
+
+
+		tmp=min;
+		min=max;
+		max=tmp;
+
+		//Doit afficher "Min vaut 10, med vaut 20 et max vaut 25
+		System.out.println("Min vaut "+min+" et max vaut "+max);
+
+	}
+
+	public static void tp1_3() 
+	{
+		int min=20;
+		int max=10;
+		int med=25;
+		int tmp;
+
+
+
+		tmp=min;
+		min=max;
+
+		max=med;
+		med=tmp;
+
+		//Doit afficher "Min vaut 10, med vaut 20 et max vaut 25
+		System.out.println("Min vaut "+min+", med vaut "+med+" et max vaut "+max);
+
+	}
+
+	public static void tp2_1() 
+	{
+
+	}
+
+	public static void tp2_2() {}
+
+	public static void sePresenter() 
+	{
+		int age=saisieInt("Saisir votre age");
+		String nom= saisieString("Saisir votre nom");
+		String prenom= saisieString("Saisir votre prenom");
+		double taille=saisieDouble("Saisir votre taille");
+		boolean majeur = true;
+
+		System.out.println("Bonjour, je suis"+prenom+" "+nom+"j'ai"+age+"ans et je fais"+taille);
+	}
+
+
+	public static void tp3_1() 
+	{
+
+		int nombre=saisieInt("Quel est le nombre ?");
+		if(nombre>=0) 
+		{
+			System.out.println("Nombre positif");
+		}
+		else {System.out.println("Nombre négatif");}
+	}
+
+
+	public static void tp3_2() 
+	{
+		int nombre=saisieInt("Quel est le nombre 1 ?");
+		int nombre2=saisieInt("Quel est le nombre 2 ?");
+
+		if((nombre>0 && nombre2>0)||(nombre<0 && nombre2<0) ) 
+		{
+			System.out.println("Produit positif");
+		}
+		else {System.out.println("Produit negatif");}
+
+
+	}
+
+
+	public static void tp3_3() 
+	{
+		int nombre=saisieInt("Quel est le nombre ?");
+		if(nombre>0) 
+		{
+			System.out.println("Nombre positif");
+		}
+		else if(nombre==0) {System.out.println("Nombre nul");}
+		else {System.out.println("Nombre négatif");}
+	}
+
+
+	public static void tp3_4() 
+	{
+		int nombre=saisieInt("Quel est le nombre 1 ?");
+		int nombre2=saisieInt("Quel est le nombre 2 ?");
+
+		if((nombre>0 && nombre2>0)||(nombre<0 && nombre2<0) ) 
+		{
+			System.out.println("Produit positif");
+		}
+		else if(nombre==0 || nombre2==0) 
+		{
+			System.out.println("Produit nul");
+		}
+		else {System.out.println("Produit negatif");}
+	}
+
+
+
+	public static void TP3_5() {
+
+		int age=saisieInt ("Quel est ton âge?");
+
+		if (age<6) {System.out.println("Tu es trop jeune");}
+
+		else if(age>=6 && age<=7){
+			System.out.println("Tu es en catégorie Poussins");
+
+		}
+		else if (age>=8 && age<=9)
+		{
+			System.out.println("Tu es en catégorie Pupille");
+		}
+
+		else if (age>=10 && age<=11)
+		{
+			System.out.println("Tu es en catégorie Minime");
+		}
+
+		else if(age>=12 && age <=17)
+		{       
+			System.out.println("Tu es en catégorie Cadet");
+		}
+		else 
+		{
+			System.out.println("Tu es trop vieux");
+		}
+
+	}
+
+	
+
+
+
+	public static void TP4_1() {
+		int heure=saisieInt("Saisir l'heure");
+		int minute=saisieInt("Saisir les minutes");
+
+		minute++;
+		if(minute==60) 
+		{
+			heure++;
+
+			minute=0;
+			if(heure==24) 
+			{
+				heure=0;
+			}
+		}
+		System.out.println("Dans une minute il sera "+heure+":"+minute);
+	}
+
+	
+	public static void TP4_2() {
+		int heure=saisieInt("Saisir l'heure");
+		int minute=saisieInt("Saisir les minutes");
+		int seconde=saisieInt("Saisir les secondes");
+
+		seconde++;
+		if(seconde==60) 
+		{
+			seconde=0;
+			minute++;
+			if(minute==60) 
+			{
+				heure++;
+	
+				minute=0;
+				if(heure==24) 
+				{
+					heure=0;
+				}
+			}
+		}
+		System.out.println("Dans une minute il sera "+heure+"h"+minute+":"+seconde);
+	}
+
+	
+	public static void tp4_3() 
+	{
+		String civ = saisieString("Saisir civ (h/f)");
+		int age = saisieInt("Saisir age");
+		
+		// IgnoreCase ne fait pas attention aux maj, H et h sont valides
+		if((civ.equalsIgnoreCase("h") && age>=20  )|| (civ.equals("f") && age>=18 && age <=35))
+		{
+			System.out.println("Imposable");
+		}
+		else 
+		{
+			System.out.println("Non imposable");
+		}
+	}
+	
+	
+	public static void tp4_4() 
+	{
+		double score1=saisieDouble("Saisir score candidat 1");
+		double score2=saisieDouble("Saisir score candidat 2");
+		double score3=saisieDouble("Saisir score candidat 3");
+		double score4=saisieDouble("Saisir score candidat 4");
+
+
+		if(score1>50 || score2>50 || score3>50 || score4>50) 
+		{
+			if(score1>50) {System.out.println("Candidat 1 gagne !");}
+			else {System.out.println("Candidat 1 perdu !");}
+		}
+		else if(score1>=12.5) 
+		{
+			if(score1>=score2 && score1>=score3 && score1>=score4) 
+			{
+				System.out.println("Candidat 1  passe au 2nd tour, ballottage favorable");
+			}
+			else 
+			{
+				System.out.println("Candidat 1  passe au 2nd tour, ballottage défavorable");
+			}
+		}
+		else 
+		{
+			System.out.println("Candidat 1 perdu !");
+		}
+
+	}
+
+	
+	public static void TP4_5()
+	{
+		int age = saisieInt("Donnez votre age");
+		int accident= saisieInt("Combien d'accident vous avez fait auparavant? ");
+		int duree = saisieInt("Depuis combien d'annee que vous avez votre permis?");
+		int depuis = saisieInt("depuis combien d'annee que vous etes client?");
+
+		String couleur;
+		//Rouge=1, 2 Orange, 3 Vert, 4 Bleu
+		int score=1;
+
+		if(age>=25) {score++;}
+		if(duree>=2) {score++;}
+		
+		score=score-accident;
+		// score-=accident fait la même chose
+		
+		if(depuis>=5 && score>0 ) {score++;}
+
+
+		switch(score) 
+		{
+		case 1 : couleur="Rouge";break;
+		case 2 : couleur="Orange";break;
+		case 3 : couleur="Vert";break;
+		case 4 : couleur="Bleu";break;
+		default : couleur="Refusé";break;
+		}
+
+		System.out.println("Votre Tarif est : "+couleur);
+
+	}
+	
+	
+	
+	
+	
+	public static void TP4_6() 
+	{
+		int jour= saisieInt("Saisir le jour");
+		int mois= saisieInt("Saisir le mois");
+		int annee= saisieInt("Saisir l'année");
+		
+		boolean dateValid=false;
+		
+		if(jour >=1 && jour <=31 && mois >=1 && mois<=12 && annee>=0) 
+		{
+			if(mois==4 || mois==6 || mois == 9 || mois==11) 
+			{
+				if(jour<=30) {dateValid=true;}
+			}
+			else if(mois==2)
+			{
+				if((annee%4==0 && annee%100!=0)|| annee%400==0) 
+				{
+					if(jour<=29) {dateValid=true;}
+				}
+				else 
+				{
+					if(jour<=28) {dateValid=true;}
+				}
+			}
+			
+		}
+		
+		if(dateValid) 
+		{
+			System.out.println("Date valide");
+		}
+		else 
+		{
+				System.out.println("Date invalide");
+		}
+	
+		
+	}
+	
+	
+	
+	
+	public static void tp5_1() 
+	{
+		int nb = saisieInt("Saisir un nombre entre 1 et 3");
+		
+		while(nb<1 || nb>3) 
+		{
+			 nb = saisieInt("Saisir un nombre entre 1 et 3 (1-2-3)");	 
+		}
+		System.out.println("Bravo, "+nb+" est bien entre 1 et 3");
+	}
+	
+	
+	public static void tp5_2() 
+	{
+		int nb = saisieInt("Saisir un nombre, j'affiche les 10 suivants");
+		/*int cpt=1;
+		while(cpt<=10) 
+		{
+			System.out.println(nb+cpt);
+			cpt++;
+		}*/
+		
+		int stop = nb+10;
+		while(nb<stop) 
+		{
+			nb++;
+			System.out.println(nb);
+		}
+		
+		
+	}
+	
+	
+	public static void tp5_3() 
+	{
+		int nb = saisieInt("Saisir un nombre, j'affiche les 10 suivants");
+		
+		for(int i=1;i<=10;i++) 
+		{
+			System.out.println(nb+i);
+		}
+	}
+	
+	
+	
+	
+	public static void tp5_4() 
+	{
+		int nb=saisieInt("Table de ?");
+		
+		System.out.println("Table de "+nb+" :");
+		
+		for(int i=1;i<=10;i++) 
+		{
+			System.out.println(nb+" x "+i+" = "+(nb*i));
+		}	
+	}
+	
+	
+	public static void tp5_5() 
+	{
+		double nombre=0;
+		double max=0;
+		int position=1;
+		
+		
+		
+		for(int i=1;i<=20;i++) 
+		{
+			nombre=saisieDouble("Saisir le nombre n°"+i);
+			
+			if(i==1) {max=nombre;}
+			
+			if(nombre>max) 
+			{
+				max=nombre;
+				position=i;
+			}
+		}
+		System.out.println("Le nombre max est : "+nombre+" à la position n° : "+position);
+		
+	}
+	
+	
+	public static double fact(int x) 
+	{
+		double resultat=1;
+		
+		for(int i=1;i<=x;i++) 
+		{
+			resultat= resultat*i;
+			//resultat *= i
+		}
+		return resultat;
+	}
+	
+	
+	public static void tp5_6() 
+	{
+		int n=1,p=1;
+		
+	
+		do {
+		 n = saisieInt("Saisir le nombre de chevaux partants");
+		 p = saisieInt("Saisir chevaux joués");
+		}while(p>n && p>=3 && p<=5);
+		
+		double x=fact(n) / fact(n - p) ;
+		double y = fact(n) / (fact(p) * fact(n - p));
+		
+		System.out.println("Dans l'ordre : une chance sur "+x+" de gagner");
+		System.out.println("Dans le désordre : une chance sur "+y+" de gagner");
+		
+	}
+	
+	public static void tp6_1() 
+	{
+		/* Solution 1
+		 * int tableau[] = new int[6];
+		for(int i=0;i<tableau.length;i++){tableau[i]=0;}*/
+		
+		
+		/*  Solution 2
+		 * int tableau[]={0,0,0,0,0,0};
+		 * 
+		 */
+		
+		//Solution 3
+		int tableau[] = new int[6];
+		
+		System.out.println(Arrays.toString(tableau));
+		
+		
+	}
+	
+	public static void tp6_2() 
+	{
+		int tableau[] = new int[6];
+		
+		for(int i=0;i<tableau.length;i++) 
+		{
+			tableau[i]=saisieInt("Saisir valeur "+(i+1));
+		}
+		System.out.println(Arrays.toString(tableau));
+	}
+	
+	public static void tp6_3() 
+	{
+		int tableau[] = {12,14,30,25};
+		int somme=0;
+		
+		for(int i=0;i<tableau.length;i++) 
+		{
+			somme += tableau[i];
+		}
+		
+		System.out.println("La somme des élements du tableau est : "+somme);
+		
+	}
+	public static void tp6_4() 
+	{
+		int tableau[] = {4,8,7,9,1,5,4,6};
+		int tableau2[] ={7,6,5,2,1,3,7,4};
+		int tableau3[] = new int[8];
+		
+		
+		for(int i=0;i<tableau.length;i++) 
+		{
+			tableau3[i]=tableau[i]+tableau2[i];
+		}
+		
+		System.out.println(Arrays.toString(tableau3));
+	}
+	
+	public static void main(String[] args) {
+		
+		
+		int taille = saisieInt("Taille du tableau ?");
+		int tableau[] = new int[taille];
+		
+		
+		
+	}
+
+}

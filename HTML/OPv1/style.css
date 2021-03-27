@@ -1,0 +1,255 @@
+
+body
+{
+margin : 0 ;
+background-color: #F4EFE7;
+background-image:url(fond.png);
+background-size: 115% 100%;
+}
+#blockRouge
+{
+
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-size: 100% 100%;
+  background-image: url("logo.png");
+
+}
+#header
+{
+  background-image:url("header.png")
+  background-size : 100% 100%;
+}
+#blockVert
+{
+  border:solid lightGreen 1px;
+  width: 100%;
+  height: 200px;
+  background-image:url("header.png")
+
+}
+
+#blockOrange
+{
+  float : left;
+  border : solid orange 1px;
+  background-color:orange;
+  width: 130px;
+  height: 70px;
+  color : blue;
+  border-radius: 0% 0% 0% 30% ;
+
+}
+#titre
+{
+  font-style:  italic;
+}
+#Text
+{
+
+  display:inline-block;
+  border : solid lightgrey 1px;
+  background-color:lightgrey;
+  width: 80%;
+  height: 80%;
+
+}
+
+#center
+{
+  display:inline-block;
+  border : solid lightgrey 1px;
+  background-color:lightgrey;
+  width: 80%;
+  height: 80%;
+}
+.titre2
+{
+  border : solid lightgrey 1px;
+  background-color:lightgrey;
+  width: 100%;
+  height: 80%;
+
+}
+
+.Luffy
+{
+  position : relative;
+  top: 0px;
+  left: 47px;
+  right: 10px;
+  bottum: 10px;
+  border : solid black 2px;
+  background-color:black;
+  width: 101px;
+  height: 64px;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("Luffy.png");
+
+}
+.Zorobis
+{
+  position : relative;
+  left: 344px;
+  right: 20px;
+  bottum: 30px;
+  position : absolute;
+   top : 273px;
+  border : solid black 2px;
+  width: 101px;
+  height: 64px;
+  background-color:black;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("Zorobis.png");
+}
+
+.Sanji
+{
+  position : relative;
+  top: 0px;
+  left:156px;
+  right: 20px;
+  bottum: 30px;
+  border : solid black 2px;
+  width: 101px;
+  height: 64px;
+  background-color:black;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("Sanji.png");
+}
+.Usopp
+{
+  position : relative;
+  top: 0px;
+  left: 428px;
+  right: 20px;
+  bottum: 30px;
+  border : solid black 2px;
+  width: 101px;
+  height: 64px;
+  background-color:black;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("Usopp.png");
+}
+.Chopper
+{
+  position : relative;
+  top: 0px;
+  left: 375px;
+  right: 20px;
+  bottum: 30px;
+  border : solid black 2px;
+  width: 101px;
+  height: 64px;
+  background-color:black;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("Chopper.png");
+}
+
+.Nami
+{
+  position : relative;
+  top: 75px;
+  left: -387px;
+  right: 20px;
+  bottum: 30px;
+  border : solid black 2px;
+  width: 101px;
+  height: 64px;
+  background-color:black;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("Nami.png");
+}
+.Robin
+{
+  position : relative;
+  top: 75px;
+  left: -334px;
+  right: 20px;
+  bottum: 30px;
+  border : solid black 2px;
+  width: 101px;
+  height: 64px;
+  background-color:black;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("Robin.png");
+}
+.Brook
+{
+  position : relative;
+  top: 75px;
+  left: -280px;
+  right: 20px;
+  bottum: 30px;
+  border : solid black 2px;
+  width: 101px;
+  height: 64px;
+  background-color:black;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("Brook.png");
+}
+.Francky
+{
+  position : relative;
+  top: 2px;
+  left: 537px;
+  right: 20px;
+  bottum: 30px;
+  border : solid black 2px;
+  width: 101px;
+  height: 64px;
+  background-color:black;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("Francky.png");
+}
+.Jinbei
+{
+  position : relative;
+  top: 2px;
+  left: 593px;
+  right: 20px;
+  bottum: 30px;
+  border : solid black 2px;
+  width: 101px;
+  height: 64px;
+  background-color:black;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("Jinbei.png");
+}
+#footers
+{
+  position :fixed;
+  bottom:0;
+  width:100%;
+  background-color: blue;
+  height: 30px;
+  color : white;
+  text-align: center;
+
+}
+
+body
+{
+
+}

@@ -1,0 +1,5 @@
+brw-rw-rw- 1 utilisateur 197121   8,   0 Mar 10 15:21 sda
+brw-rw-rw- 1 utilisateur 197121   8,   1 Mar 10 15:21 sda1
+brw-rw-rw- 1 utilisateur 197121   8,   2 Mar 10 15:21 sda2
+brw-rw-rw- 1 utilisateur 197121   8,   3 Mar 10 15:21 sda3
+brw-rw-rw- 1 utilisateur 197121   8,   4 Mar 10 15:21 sda4

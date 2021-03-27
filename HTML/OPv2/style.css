@@ -1,0 +1,57 @@
+
+body
+{
+	background-color: lightyellow;
+}
+#logo
+{
+	background-color: red;
+	min-height: 110px;
+	min-width: 130px;
+	position: absolute;
+}
+#banniere
+{
+	background-color: lightgreen;
+	min-height: 190px;
+}
+
+#menu
+{
+	background-color: orange;
+	max-height: 70px;
+	padding: 10px;
+}
+
+#content
+{
+	background-color: lightgrey;
+	margin-bottom: 70px;
+
+}
+#firstLetter
+{
+	font-size: 60px;
+    font-family: cursive;
+}
+
+.crew
+{
+ min-width: 120px;
+ min-height: 120px;
+ background-color: black;
+ margin:10px;
+ margin-left: 20px;
+}
+
+#footer
+{
+	margin-left: 15px;
+	padding-top:15px;
+	background-color: blue;
+	min-height: 50px;
+	text-align: center;
+	color:white;
+	position: fixed;
+	bottom: 0;
+}

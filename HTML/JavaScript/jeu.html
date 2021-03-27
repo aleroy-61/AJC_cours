@@ -1,0 +1,128 @@
+<style>
+    #game,#minute,#seconde,#point,#content,#angry{display:none;};
+
+</style>
+<html>
+  <body>
+
+    <div id="titre">Timer</div>
+      <div id="time">
+        <span id="minute">00</span>
+        <span id="point">:</span>
+        <span id="seconde">00</span>
+        <input id="playBtn" type="button" value="play">
+        <input id="stopBtn" type="button" value="pause">
+      </div>
+      <br><br>
+      <br><br>
+      <div id="game">
+          <h3 id="txtCapitale">Saisir la capitale du pays:<span class="jeu"></span><h3>
+          <input type="text" id="reponse">
+          <input type="button" id="validateBtn" value="Valider"><br/>
+          <span id="result"></span>
+
+      </div>
+
+      <div id="score"/>
+
+    </body>
+    </html>
+
+<script>
+  var p1={pays:"France",ville:"Paris"};
+  var p2={pays:"Suisse",ville:"Berne"};
+  var p3={pays:"Allemagne",ville:"Berlin"};
+  var p4={pays:"Pologne",ville:"Varsovie"};
+  var p5={pays:"Mongolie",ville:"Oulan-Bator"};
+  var i=0;
+  var tab = [p1,p2,p3,p4,p5];
+  var rep;
+  var score=0;
+
+  var sec=seconde.innerHTML;
+  var min=minute.innerHTML;
+  var inter;
+
+  playBtn.onclick=lancerChrono;
+  stopBtn.onclick=stopChrono;
+  validateBtn.onclick=rep;
+  reponse.onkeypress=enter;
+
+  function enter(e)
+  {
+    if (e.keyCode==13)
+    rep();
+
+
+  }
+  function stopChrono()
+  {
+    playBtn.disabled=false;
+    stopBtn.disabled=true;
+    clearInterval(inter);
+    minute.style.display="none";
+    seconde.style.display="none";
+    game.style.display="none";
+  }
+
+
+  function lancerChrono()
+  {
+
+    playBtn.disabled=true;
+    stopBtn.disabled=false;
+    inter=setInterval(calculTimer,1000);
+    minute.style.display="inline-block";
+    seconde.style.display="inline-block";
+    game.style.display="block";
+    txtCapitale.innerHTML="Saisir la capitale du pays:"+tab[i].pays;
+
+  }
+
+      function rep()
+    {
+
+        rep=document.getElementById("reponse").value;
+        if(rep==tab[i].ville)
+        {
+          result.style.color="green";
+          result.innerHTML="Bonne réponse <img id="content" src ="content.png" >";
+
+        }
+        
+        else
+        {
+            result.style.color="red";
+            result.innerHTML="Mauvaise réponse <img id="angry" src ="angry.png">";
+            var angry=document.getElementById("angry");
+        }
+
+        reponse.value="";
+        i++;
+        txtCapitale.innerHTML="Saisir la capitale du pays:"+tab[i].pays;
+  }
+
+
+  function calculTimer()
+  {
+      sec++;
+      if(sec==60)
+      {
+        sec=0;
+        min++;
+      }
+      minute.innerHTML=min.toLocaleString('en-US', {minimumIntegerDigits: 2});
+      seconde.innerHTML=sec.toLocaleString('en-US', {minimumIntegerDigits: 2});
+
+
+      minute.innerHTML=min;
+      seconde.innerHTML=sec;
+  }
+
+
+
+
+
+
+
+  </script>

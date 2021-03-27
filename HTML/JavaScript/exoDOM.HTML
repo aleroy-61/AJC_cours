@@ -1,0 +1,49 @@
+<body style="background-color: lightyellow;">
+<p id="paragPrinci" class="secondaire">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p class="secondaire">Parag secondaire</p>
+
+<p>Parag milieu</p>
+
+<h3 class="secondaire">Titre secondaire</h3>
+
+<p class="secondaire">Parag secondaire</p>
+
+<p>Parag fin</p>
+
+<script >
+ var choix = prompt("Voulez-vous changer la couleur des id / class / tags?");
+ var choix2= prompt("voulez-vous modifier l'un de ces éléments: id / class / tags? ")
+ var modification2= prompt("Que voulez-vous modifier?")
+ if (choix == "id")
+ {
+  var couleur = prompt("Quel couleur voulez vous?");
+   var paragPrinci = document.getElementById("paragPrinci");
+   paragPrinci.style.color=couleur;
+ }
+ else if (choix  == "class")
+ {
+  var couleur = prompt("Quel couleur voulez vous?");
+   var secondaire = document.getElementsByClassName("secondaire");
+   console.log(secondaire);
+   for(var i=0; i< secondaire.length; i++)
+   {
+     secondaire[i].style.color=couleur;
+     alert(secondaire[i].innerHTML);
+   }
+ }
+ else if (choix == "tags")
+  {
+   var choixTag = prompt("Quel tag voulez vous modifier?");
+
+   couleur = prompt("Quel couleur voulez vous?");
+   var choixTag = document.getElementsByTagName(choixTag);
+   console.log(choixTag);
+   for(var i=0; i< choixTag.length; i++)
+   {
+     choixTag[i].style.color=couleur;
+
+   }
+  }
+
+  </script>
